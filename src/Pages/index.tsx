@@ -41,7 +41,7 @@ export default function Home() {
     id: book._id,
     title: book.title,
     description: book.description,
-    price: `$${book.price}`,
+    price: `${book.price} EGP`,
     image: book.image,
   }));
 
