@@ -25,7 +25,9 @@ const Products = () => {
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="text-xl font-semibold text-gray-600">Loading books...</div>
+        <div className="text-xl font-semibold text-gray-600">
+          Loading books...
+        </div>
       </div>
     );
   }
@@ -33,7 +35,9 @@ const Products = () => {
   if (isError) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="text-xl font-semibold text-red-600">Error loading books: {error.message}</div>
+        <div className="text-xl font-semibold text-red-600">
+          Error loading books: {error.message}
+        </div>
       </div>
     );
   }
@@ -44,7 +48,7 @@ const Products = () => {
     title: book.title,
     shortDesc: book.description, // API only has one description
     fullDesc: book.description,
-    price: `$${book.price}`, // Format number to string with currency
+    price: `${book.price} EGP`, // Format number to string with currency
     image: book.image,
     author: "Doctor Nelly", // Hardcoded author as it's not in API response based on user example
   }));
@@ -77,7 +81,8 @@ const Products = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   onError={(e) => {
                     // Fallback for broken images if needed
-                    (e.target as HTMLImageElement).src = "https://via.placeholder.com/400x600?text=No+Image";
+                    (e.target as HTMLImageElement).src =
+                      "https://via.placeholder.com/400x600?text=No+Image";
                   }}
                 />
               </div>
@@ -175,8 +180,6 @@ const Products = () => {
           </div>
         </div>
       )}
-
-
     </div>
   );
 };
