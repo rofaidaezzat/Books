@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-    baseURL: "https://lavishly-fogless-sang.ngrok-free.dev/",
+    baseURL: "https://api-knowledge-think.vercel.app/",
     timeout: 180000,
     headers: {
         'Content-Type': 'application/json',
