@@ -126,7 +126,8 @@ export default function Home() {
                       alt={book.title}
                       className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
                       onError={(e) => {
-                         (e.target as HTMLImageElement).src = 'https://via.placeholder.com/300x400?text=No+Image';
+                        (e.target as HTMLImageElement).src =
+                          "https://via.placeholder.com/300x400?text=No+Image";
                       }}
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
