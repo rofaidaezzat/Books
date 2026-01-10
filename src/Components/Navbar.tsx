@@ -23,10 +23,9 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-2 group">
             
             <span className="text-2xl font-bold bg-gradient-to-r from-indigo-700 to-purple-700 bg-clip-text text-transparent">
-              Dr. Nelly's Books
+              Knowledge in a Capsule Academy
             </span>
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
