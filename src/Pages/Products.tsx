@@ -71,10 +71,10 @@ const Products = () => {
           {books.map((book) => (
             <div
               key={book.id}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer group"
+              className="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer group flex flex-col"
             >
               {/* Book Image */}
-              <div className="h-80 overflow-hidden bg-gray-200">
+              <div className="h-64 overflow-hidden bg-gray-200 flex-shrink-0">
                 <img
                   src={book.image}
                   alt={book.title}
@@ -88,20 +88,17 @@ const Products = () => {
               </div>
 
               {/* Book Info */}
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors">
+              <div className="p-5 flex flex-col flex-grow">
+                <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-purple-600 transition-colors">
                   {book.title}
                 </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed line-clamp-2">
+                <p className="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-2">
                   {book.shortDesc}
                 </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-3xl font-bold text-purple-600">
-                    {book.price}
-                  </span>
+                <div className="flex items-center justify-end mt-auto">
                   <button
                     onClick={() => setSelectedBook(book)}
-                    className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-xl"
+                    className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-xl"
                   >
                     View Details
                   </button>
@@ -166,14 +163,7 @@ const Products = () => {
                     </p>
                   </div>
 
-                  <div className="border-t pt-6">
-                    <p className="text-gray-500 text-sm uppercase tracking-wide mb-2">
-                      Price
-                    </p>
-                    <p className="text-5xl font-bold text-purple-600 mb-6">
-                      {selectedBook.price}
-                    </p>
-                  </div>
+                  
                 </div>
               </div>
             </div>

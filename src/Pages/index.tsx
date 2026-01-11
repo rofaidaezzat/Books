@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Star, Mail, CheckCircle, ArrowRight, User, Lightbulb } from "lucide-react";
+import { Star, Mail, CheckCircle, ArrowRight, Lightbulb } from "lucide-react";
 import { fetchBooks, type IBook } from "../Services/apiBooks";
 
 const testimonials = [
@@ -37,7 +37,7 @@ export default function Home() {
     queryFn: fetchBooks,
   });
 
-  const featuredBooks = (data?.data || []).slice(0, 3).map((book: IBook) => ({
+  const featuredBooks = (data?.data || []).slice(0, 4).map((book: IBook) => ({
     id: book._id,
     title: book.title,
     description: book.description,
@@ -113,14 +113,14 @@ export default function Home() {
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {featuredBooks.map((book) => (
                 <motion.div
                   key={book.id}
-                  whileHover={{ y: -8 }}
-                  className="group bg-white rounded-2xl p-4 transition-all duration-300 hover:shadow-xl border border-gray-100"
+                  whileHover={{ y: -5 }}
+                  className="group bg-white rounded-2xl p-3 transition-all duration-300 hover:shadow-xl border border-gray-100 flex flex-col h-full"
                 >
-                  <div className="mb-6 rounded-xl overflow-hidden bg-gray-100 relative aspect-[3/4]">
+                  <div className="mb-3 rounded-xl overflow-hidden bg-gray-100 relative h-56 flex-shrink-0">
                     <img
                       src={book.image}
                       alt={book.title}
@@ -132,22 +132,19 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
                   </div>
-                  <div className="px-2">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  <div className="px-1 flex flex-col flex-grow">
+                    <h3 className="text-lg font-bold text-gray-900 mb-1 leading-tight">
                       {book.title}
                     </h3>
-                    <p className="text-gray-600 mb-4 line-clamp-2">
+                    <p className="text-gray-600 mb-3 line-clamp-2 text-xs">
                       {book.description}
                     </p>
-                    <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                      <span className="text-2xl font-bold text-indigo-600">
-                        {book.price}
-                      </span>
+                    <div className="flex items-center justify-end pt-2 border-t border-gray-100 mt-auto">
                       <Link
                         to="/products"
-                        className="text-sm font-semibold text-gray-900 hover:text-indigo-600 flex items-center gap-1 transition-colors"
+                        className="text-xs font-semibold text-gray-900 hover:text-indigo-600 flex items-center gap-1 transition-colors"
                       >
-                        View Details <ArrowRight className="w-4 h-4" />
+                        View Details <ArrowRight className="w-3 h-3" />
                       </Link>
                     </div>
                   </div>
@@ -165,8 +162,12 @@ export default function Home() {
             <div className="md:w-1/2">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-br from-indigo-200 to-purple-200 rounded-full opacity-50 blur-2xl"></div>
-                <div className="relative w-full aspect-square max-w-md mx-auto bg-gradient-to-br from-indigo-100 to-white rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center border-4 border-white">
-                  <User className="w-32 h-32 text-indigo-300" />
+                <div className="relative w-full aspect-square max-w-md mx-auto bg-gradient-to-br from-indigo-100 to-white rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                  <img
+                    src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    alt="Knowledge in a Capsule Academy Library"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 {/* Replaced image with a placeholder since we don't have a real one yet */}
               </div>
