@@ -14,10 +14,10 @@ const Footer = () => {
               <div className="bg-gradient-to-br from-indigo-500 to-purple-500 p-2 rounded-lg">
                 <BookOpen className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold">Dr. Nelly's Books</span>
+              <span className="text-xl font-bold">Knowledge in a Capsule</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Empowering minds through knowledge, inspiration, and transformative literature.
+              Big Knowledge. Small Dose. Delivering clear and concise knowledge for the digital era.
             </p>
             {/* Social Media */}
             <div className="flex space-x-3 pt-2">
@@ -129,10 +129,10 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-indigo-400 mt-0.5 flex-shrink-0" />
                 <a
-                  href="mailto:info@drnellybooks.com"
+                  href="mailto:info@knowledgecapsule.com"
                   className="text-gray-300 hover:text-white transition-colors duration-300"
                 >
-                  info@drnellybooks.com
+                  info@knowledgecapsule.com
                 </a>
               </li>
               <li className="flex items-start space-x-3">
@@ -147,7 +147,7 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-indigo-400 mt-0.5 flex-shrink-0" />
                 <span className="text-gray-300">
-                  123 Book Street, Knowledge City, KC 12345
+                  123 Knowledge Way, Learning City, KC 10101
                 </span>
               </li>
             </ul>
@@ -157,8 +157,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} Dr. Nelly's Books. All rights reserved. Crafted with{" "}
-            <span className="text-red-400">❤</span> for book lovers.
+            © {currentYear} Knowledge in a Capsule Academy. All rights reserved.
           </p>
         </div>
       </div>

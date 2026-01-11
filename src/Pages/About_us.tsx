@@ -5,65 +5,52 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-blue-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+      <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-serif font-bold mb-4">
-            About Doctor Nelly
+            Knowledge in a Capsule Academy
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 font-light">
-            Empowering lives through holistic wellness and compassionate care
+            Big Knowledge. Small Dose
           </p>
         </div>
       </div>
 
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 py-16">
-        {/* Biography Section */}
+        {/* Identity Section */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
           {/* Image */}
           <div className="order-2 md:order-1">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-3xl opacity-20 blur-xl"></div>
               <img
-                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&h=700&fit=crop"
-                alt="Doctor Nelly"
+                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=700&fit=crop"
+                alt="Knowledge in a Capsule Academy"
                 className="relative rounded-3xl shadow-2xl w-full object-cover"
               />
             </div>
           </div>
 
-          {/* Biography Text */}
+          {/* Identity Text */}
           <div className="order-1 md:order-2">
             <div className="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Meet the Author
+              Where Research Meets Clarity
             </div>
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-800 mb-6 leading-tight">
-              A Journey of Healing & Discovery
+              Small Capsules. Big Impact.
             </h2>
             <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
               <p>
-                For over two decades,{" "}
-                <span className="font-semibold text-gray-900">
-                  Doctor Nelly
-                </span>{" "}
-                has dedicated her life to understanding the intricate
-                connections between mind, body, and spirit. Her journey began in
-                traditional medicine but evolved into a profound exploration of
-                holistic wellness practices.
+                A modern academic identity delivering big knowledge in small, focused capsules.
               </p>
               <p>
-                With certifications in nutrition science, integrative medicine,
-                and mindfulness therapy, she brings a unique perspective that
-                bridges ancient wisdom with modern scientific understanding. Her
-                approach is rooted in compassion, evidence-based research, and a
-                deep respect for each individual's healing journey.
+                <strong>Knowledge in a Capsule Academy</strong> is a leading global platform for delivering clear, concise, and accessible knowledge. We adopted a modern digital learning approach to enhanced knowledge delivery.
               </p>
-              <p>
-                Through her books, workshops, and clinical practice, Doctor
-                Nelly has helped thousands of individuals reclaim their health,
-                discover inner peace, and unlock their full potential for
-                wellbeing.
-              </p>
+              <ul className="list-disc pl-5 space-y-2">
+                <li><strong>Navy Blue:</strong> Represents academic credibility and depth.</li>
+                <li><strong>White:</strong> Symbolizes simplicity, trust, and clarity.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -71,7 +58,7 @@ const AboutUs = () => {
         {/* Mission & Vision Cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-20">
           {/* Mission Card */}
-          <div className="bg-white rounded-3xl shadow-xl p-10 border-t-4 border-blue-500 hover:shadow-2xl transition-shadow duration-300">
+          <div className="bg-white rounded-3xl shadow-xl p-10 border-t-4 border-blue-600 hover:shadow-2xl transition-shadow duration-300">
             <div className="flex items-center mb-6">
               <div className="bg-blue-100 p-4 rounded-2xl">
                 <Heart className="w-8 h-8 text-blue-600" />
@@ -81,16 +68,12 @@ const AboutUs = () => {
               </h3>
             </div>
             <p className="text-gray-700 leading-relaxed text-lg">
-              To empower individuals with the knowledge, tools, and inspiration
-              needed to take control of their health and wellbeing. We believe
-              that true healing comes from addressing the whole person—body,
-              mind, and spirit—through accessible, evidence-based, and
-              compassionate guidance.
+              Striving for excellence and leadership in developing individuals’ knowledge and skills through high-quality, reliable knowledge capsules that simplify complexity, respect learners’ time, and support lifelong learning, academic excellence, and research dissemination in alignment with the demands of the digital era and the challenges of sustainable development.
             </p>
           </div>
 
           {/* Vision Card */}
-          <div className="bg-white rounded-3xl shadow-xl p-10 border-t-4 border-indigo-500 hover:shadow-2xl transition-shadow duration-300">
+          <div className="bg-white rounded-3xl shadow-xl p-10 border-t-4 border-indigo-600 hover:shadow-2xl transition-shadow duration-300">
             <div className="flex items-center mb-6">
               <div className="bg-indigo-100 p-4 rounded-2xl">
                 <Target className="w-8 h-8 text-indigo-600" />
@@ -100,10 +83,7 @@ const AboutUs = () => {
               </h3>
             </div>
             <p className="text-gray-700 leading-relaxed text-lg">
-              A world where holistic wellness is accessible to everyone, where
-              preventive care is prioritized over reactive treatment, and where
-              individuals feel empowered to make informed decisions about their
-              health with confidence and clarity.
+              A leading global platform for delivering clear, concise, and accessible knowledge.
             </p>
           </div>
         </div>
@@ -317,12 +297,10 @@ const AboutUs = () => {
         {/* Closing Statement */}
         <div className="text-center mt-20 max-w-3xl mx-auto">
           <p className="text-2xl text-gray-700 leading-relaxed font-light italic">
-            "Healing is not a destination, but a lifelong journey of
-            self-discovery, growth, and transformation. I am honored to walk
-            this path alongside you."
+            "Empowering the world with knowledge, one capsule at a time."
           </p>
           <p className="text-xl text-gray-600 mt-6 font-serif">
-            — Doctor Nelly
+            — Knowledge in a Capsule Academy
           </p>
         </div>
       </div>

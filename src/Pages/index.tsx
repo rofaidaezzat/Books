@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Star, Mail, CheckCircle, ArrowRight, User } from "lucide-react";
+import { Star, Mail, CheckCircle, ArrowRight, User, Lightbulb } from "lucide-react";
 import { fetchBooks, type IBook } from "../Services/apiBooks";
 
 const testimonials = [
@@ -57,12 +57,12 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block py-1 px-3 rounded-full bg-indigo-50 text-indigo-600 text-sm font-semibold mb-6">
-              Best Selling Author & Speaker
+              Leading Global Knowledge Platform
             </span>
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
-              Expand Your Mind with <br />
+              Big Knowledge. <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
-                Dr. Nelly's Insights
+                Small Dose.
               </span>
             </h1>
           </motion.div>
@@ -73,9 +73,7 @@ export default function Home() {
             transition={{ delay: 0.2 }}
             className="text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Discover a world of knowledge, inspiration, and expertise through
-            carefully crafted books designed to enrich your mind and elevate
-            your thinking.
+            Knowledge in a Capsule Academy delivers clear, concise, and accessible knowledge through focused capsules designed for the digital era.
           </motion.p>
 
           <motion.div
@@ -86,12 +84,14 @@ export default function Home() {
           >
             <Link to="/products">
               <button className="px-8 py-4 rounded-full bg-indigo-600 text-white font-semibold shadow-lg shadow-indigo-200 hover:bg-indigo-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-2">
-                Explore Books <ArrowRight className="w-5 h-5" />
+                Explore Knowledge <ArrowRight className="w-5 h-5" />
               </button>
             </Link>
-            <button className="px-8 py-4 rounded-full bg-white text-gray-700 font-semibold border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-all duration-300">
-              Learn More
-            </button>
+            <Link to="/about-us">
+              <button className="px-8 py-4 rounded-full bg-white text-gray-700 font-semibold border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-all duration-300">
+                Learn More
+              </button>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -173,23 +173,19 @@ export default function Home() {
             </div>
             <div className="md:w-1/2">
               <span className="text-indigo-600 font-semibold mb-2 block">
-                About the Author
+                About the Academy
               </span>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Meet Dr. Nelly
+                Knowledge in a Capsule
               </h2>
               <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-                With over 20 years of experience in cognitive science and
-                education, Dr. Nelly has dedicated her life to understanding the
-                potential of the human mind. Her work bridges the gap between
-                complex efficiency scientific research and practical, everyday
-                application.
+                A leading global platform for delivering clear, concise, and accessible knowledge. We are striving for excellence and leadership in developing individuals’ knowledge and skills through high-quality capsules.
               </p>
               <div className="space-y-4 mb-8">
                 {[
-                  "Ph.D. in Cognitive Neuroscience",
-                  "Best-selling author of 5 books",
-                  "Featured speaker at TEDx",
+                  "Clear, Concise, Accessible",
+                  "Academic Excellence",
+                  "Digital Innovation",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
@@ -197,10 +193,70 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <button className="px-8 py-3 rounded-full bg-gray-900 text-white font-semibold hover:bg-gray-800 transition-colors shadow-lg">
-                Read Full Bio
-              </button>
+              <Link to="/about-us">
+                <button className="px-8 py-3 rounded-full bg-gray-900 text-white font-semibold hover:bg-gray-800 transition-colors shadow-lg">
+                  Read More
+                </button>
+              </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values & Ethics Summary */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-50 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-50 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-16">
+            <span className="text-indigo-600 font-semibold mb-2 block">
+              Our Core Principles
+            </span>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Values That Drive Us
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+              Guided by a commitment to academic excellence, integrity, and innovation in every knowledge capsule we deliver.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {[
+              {
+                title: "Quality",
+                desc: "Adhering to high scientific and academic standards in content development.",
+                icon: <Star className="w-8 h-8 text-yellow-500" fill="currentColor" />,
+              },
+              {
+                title: "Credibility",
+                desc: "Relying on trusted sources and research-based content verified through review.",
+                icon: <CheckCircle className="w-8 h-8 text-green-500" />,
+              },
+              {
+                title: "Innovation",
+                desc: "Adopting modern digital learning approaches to enhance knowledge delivery.",
+                icon: <Lightbulb className="w-8 h-8 text-blue-500" />,
+              },
+            ].map((value, index) => (
+              <div key={index} className="bg-slate-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="bg-white p-4 rounded-xl inline-flex mb-6 shadow-sm">
+                  {value.icon}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{value.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link
+              to="/about-us"
+              className="inline-flex items-center gap-2 text-indigo-600 font-bold hover:text-indigo-700 transition-colors group"
+            >
+              Read Full Code of Ethics 
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>
